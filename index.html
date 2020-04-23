@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
+<script>
+	window.addEventListener('message', event => {
+	    // IMPORTANT: check the origin of the data! 
+	    if (event.origin.startsWith('https://hungry-liskov-84d5f2.netlify.app/')) { 
+	        // The data was sent from your site.
+	        // Data sent with postMessage is stored in event.data:
+	        alert(event.data);
+	    } else {
+	        // The data was NOT sent from your site! 
+	        // Be careful! Do not use it. This else branch is
+	        // here just for clarity, you usually shouldn't need it.
+	        return; 
+	    } 
+	}); 
+</script>
 <body>
 
 <h1>My First Heading</h1>
 <p>My first paragraph.</p>
-<input type="checkbox" id="my_checkbox" onchange="alert('triggered onchange')">
-<iframe src="https://nifty-raman-262600.netlify.app/"></iframe>
+<iframe src="https://hungry-liskov-84d5f2.netlify.app/"></iframe>
 
 </body>
 </html>
