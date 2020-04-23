@@ -6,11 +6,13 @@
 	    if (event.origin.startsWith('https://hungry-liskov-84d5f2.netlify.app/')) { 
 	        // The data was sent from your site.
 	        // Data sent with postMessage is stored in event.data:
-	        alert(event.data);
+		console.log("received data");
+	        console.log(event.data);
 	    } else {
 	        // The data was NOT sent from your site! 
 	        // Be careful! Do not use it. This else branch is
 	        // here just for clarity, you usually shouldn't need it.
+		console.log("received data from other site");
 	        return; 
 	    } 
 	}); 
